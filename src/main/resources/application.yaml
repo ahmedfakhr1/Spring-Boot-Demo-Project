@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: JavaLearning.Quarter1
+  mongodb:
+    uri: ${MONGODB_URI}
+    database: TestDB
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: classpath:PTAKeyStore
+    key-store-type: PKCS12
+    key-store-password: ${KEY_STORE_PASSWORD}
+    key-alias: PTA
+    key-password: ${KEY_PASSWORD}
+
+logging:
+  level:
+    org.mongodb.driver.protocol.command: DEBUG
